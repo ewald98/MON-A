@@ -1,0 +1,28 @@
+[
+  {
+    "if": ["2K resolution"],
+    "then": "budget < 1500",
+    "final": false
+  },
+  {
+    "if": ["2K resolution"],
+    "then": "budget < 1500",
+    "final": false
+  },
+  {
+    "_comment": "TODO: change price into pricerate so that it adapts according to your needs... ",
+    "if": ["RON < 1500"],
+    "then": "budget choice",
+    "final": false
+  },
+  {
+    "if":  ["wish to mount it on wall"],
+    "then":  "requires vesa mount",
+    "final": false
+  },
+  {
+    "if": ["budget choice", "requires vesa mount"],
+    "then": "28\" Lenovo",
+    "final": true
+  }
+]
