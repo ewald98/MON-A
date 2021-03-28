@@ -76,7 +76,6 @@ def check_if_conclusion_is_false(conclusion):
 
 
 def ask_question():
-    # TODO: false_conclusions: invalidate false conclusions(for < or >)
     for rule in rules:
         if check_if_conclusion_is_false(rule[THEN]):   # we verify if there isn't something that we dont' have to ask
             continue
