@@ -1,28 +1,234 @@
 [
   {
-    "if": ["2K resolution"],
-    "then": "budget < 1500",
+    "if": ["set budget"],
+    "then": "set budget",
     "final": false
   },
   {
-    "if": ["2K resolution"],
-    "then": "budget < 1500",
+    "if": ["budget < 501"],
+    "then": "low price",
     "final": false
   },
+  {
+    "if": ["budget > 500", "budget < 1201"],
+    "then": "medium price",
+    "final": false
+  },
+  {
+    "if": ["budget > 1200", "budget < 2001"],
+    "then": "high price",
+    "final": false
+  },
+  {
+    "if": ["budget > 2000"],
+    "then": "very high price",
+    "final": false
+  },
+
+
+
+
+  {
+    "if": ["Gaming Monitor"],
+    "then": "gaming",
+    "final": false
+  },
+  {
+    "_comment": "Ideea e ca vreau sa incerc sa ajung la raspuns cat mai repede prin intrebari generice, si daca nu ajung atunci incep sa intreb de detalii",
+    "_comment2": "deci cumva vreau sa se adapteze sistemul in functie de cunostiintele utilizatorului",
+    "if": ["gaming"],
+    "then": "FullHD resolution",
+    "final": false
+  },
+  {
+    "if": ["gaming"],
+    "then": "2K resolution",
+    "final": false
+  },
+  {
+    "if": ["gaming"],
+    "then": "high frequency",
+    "final": false
+  },
+  {
+    "if":  ["gaming"],
+    "then":  "IPS display",
+    "final": false
+  },
+  {
+    "if":  ["gaming"],
+    "then":  "TN display",
+    "final": false
+  },
+
+
+
+  {
+    "if": ["Office Monitor"],
+    "then": "office",
+    "final": false
+  },
+  {
+    "if": ["office"],
+    "then": "FullHD resolution",
+    "final": false
+  },
+  {
+    "if": ["office"],
+    "then": "2K resolution",
+    "final": false
+  },
+  {
+    "if": ["office"],
+    "then": "4K resolution",
+    "final": false
+  },
+  {
+    "if": ["office"],
+    "then": "normal frequency",
+    "final": false
+  },
+  {
+    "if":  ["office"],
+    "then":  "IPS display",
+    "final": false
+  },
+  {
+    "if":  ["office"],
+    "then":  "VA display",
+    "final": false
+  },
+
+
+
+  {
+    "if":  ["Wish to mount it on wall or wish to make out the most out of your desk space"],
+    "then":  "vesa mount",
+    "final": false
+  },
+
+
+
+  {
+    "if":  ["Wish to have multiple monitors"],
+    "then":  "multiple monitors",
+    "final": false
+  },
+  {
+    "if":  ["multiple monitors", "Wish to create the illusion of the monitors being just one"],
+    "then":  "borderless",
+    "final": false
+  },
+
+
+
+  {
+    "if":  ["Borderless screen"],
+    "then":  "borderless",
+    "final": false
+  },
+  {
+    "if":  ["Do you need a vesa mount"],
+    "then":  "vesa mount",
+    "final": false
+  },
+
+
+
+  {
+    "if":  ["FullHD resolution"],
+    "then":  "FullHD resolution",
+    "final": false
+  },
+  {
+    "if":  ["2K resolution"],
+    "then":  "2K resolution",
+    "final": false
+  },
+  {
+    "if":  ["4K resolution"],
+    "then":  "4K resolution",
+    "final": false
+  },
+
+
+
+
+  {
+    "if":  ["IPS display"],
+    "then":  "IPS display",
+    "final": false
+  },
+  {
+    "if":  ["TN display"],
+    "then":  "TN display",
+    "final": false
+  },
+  {
+    "if":  ["VA display"],
+    "then":  "VA display",
+    "final": false
+  },
+
+
+
+  {
+    "if": ["set refresh_rate"],
+    "then": "set refresh_rate",
+    "final": false
+  },
+  {
+    "if": ["refresh_rate < 81"],
+    "then": "normal frequency",
+    "final": false
+  },
+  {
+    "if": ["refresh_rate > 80"],
+    "then": "high frequency",
+    "final": false
+  },
+
+
+
   {
     "_comment": "TODO: change price into pricerate so that it adapts according to your needs... ",
-    "if": ["RON < 1500"],
-    "then": "budget choice",
-    "final": false
+    "if": ["medium price", "4K resolution", "vesa mount", "borderless", "normal frequency", "IPS display"],
+    "then": "1200RON 28\" 4K IPS Lenovo 60Hz",
+    "final": true
   },
   {
-    "if":  ["wish to mount it on wall"],
-    "then":  "requires vesa mount",
-    "final": false
+    "if": ["medium price", "2K resolution", "normal frequency", "IPS display", "borderless"],
+    "then": "850RON 27\" 2K IPS Dell 75Hz",
+    "final": true
   },
   {
-    "if": ["budget choice", "requires vesa mount"],
-    "then": "28\" Lenovo",
+    "if": ["low price", "FullHD resolution", "normal frequency", "IPS display"],
+    "then": "430RON 24\" FullHD IPS Lenovo 60Hz",
+    "final": true
+  },
+  {
+    "if": ["medium price", "FullHD resolution", "high frequency", "TN display"],
+    "then": "799RON 23.8\" FullHD TN AOC 144Hz",
+    "final": true
+  },
+  {
+    "if": ["medium price", "FullHD resolution", "high frequency", "IPS display", "vesa mount"],
+    "then": "999RON 24.5\" FullHD IPS Dell 120Hz",
+    "final": true
+  },
+  {
+    "if": ["very high price", "FullHD resolution", "high frequency", "IPS display"],
+    "then": "2500RON 24.5\" FullHD IPS Dell 288Hz",
+    "final": true
+  },
+  {
+    "if": ["high price", "4K resolution", "normal frequency", "IPS display"],
+    "then": "1900RON 31.5\" 4K IPS Philips 75Hz",
+    "final": true
+  },
+  {
+    "if": ["high price", "2K resolution", "high frequency", "IPS display"],
+    "then": "1600RON 27\" 2K TN BENQ 144Hz",
     "final": true
   }
 ]
